@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
     infoItem: {
         flex: 1,
         alignItems: 'flex-start',
-        paddingLeft: 2
+        paddingLeft: 3
     },
     infoLabel: {
         fontSize: 11,
