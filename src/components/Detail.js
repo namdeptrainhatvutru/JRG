@@ -54,21 +54,21 @@ const Detail = () => {
                                         <Text style={{ color: Colors.gray, marginLeft: 5, fontSize: 6 }}>Support android 5+</Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 3 }}>
-                                        <Text style={{ color: Colors.black, fontSize: 6, backgroundColor: '#dddadaff', padding: 5, borderRadius: 3,fontWeight: 'bold' }}>REQUEST</Text>
-                                        <View style={{ borderWidth: 0.5, padding: 1, marginLeft: 5, borderRadius: 3, borderColor: '#6a6a6aff',flexDirection:'row' }}>
+                                        <Text style={{ color: Colors.black, fontSize: 7, backgroundColor: '#dddadaff', padding: 5, borderRadius: 2, fontWeight: 'bold' }}>REQUEST</Text>
+                                        <View style={{ borderWidth: 0.5, padding: 1, marginLeft: 5, borderRadius: 3, borderColor: '#6a6a6aff', flexDirection: 'row' }}>
                                             <View>
                                                 <MaterialCommunityIcons name="google-play" size={12} />
                                             </View>
                                             <View>
-                                               <Text style={{ color: Colors.gray, marginLeft: 5, fontSize: 4 }}>Get it on</Text>
-                                            <Text style={{ color: Colors.black, marginLeft: 5, fontSize: 6 }}>Google Play</Text> 
+                                                <Text style={{ color: Colors.gray, marginLeft: 5, fontSize: 4 }}>Get it on</Text>
+                                                <Text style={{ color: Colors.black, marginLeft: 5, fontSize: 6 }}>Google Play</Text>
                                             </View>
-                                            
+
                                         </View>
                                     </View>
                                     <Text style={{ fontSize: 7 }}>only Support device root</Text>
                                 </View>
-                                
+
                             </View>
                             <View style={styles.buttonContainer}>
                                 <View style={styles.buttonRow}>
@@ -87,8 +87,34 @@ const Detail = () => {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                            <View style={{height:1,backgroundColor:'#dddadaff'}}/>
-
+                        <View style={{ height: 1, backgroundColor: '#dddadaff' }} />
+                        
+                        <View style={styles.infoRow}>
+                            <View style={styles.infoItem}>
+                                <Text style={styles.infoLabel}>Version</Text>
+                                <Text style={styles.infoValue}>v1.5.7</Text>
+                            </View>
+                            <View style={styles.infoDivider} />
+                            <View style={styles.infoItem}>
+                                <Text style={styles.infoLabel}>Size</Text>
+                                <Text style={styles.infoValue}>435.93MB</Text>
+                            </View>
+                            <View style={styles.infoDivider} />
+                            <View style={styles.infoItem}>
+                                <Text style={styles.infoLabel}>Category</Text>
+                                <Text style={styles.infoValue}>Games</Text>
+                            </View>
+                            <View style={styles.infoDivider} />
+                            <View style={styles.infoItem}>
+                                <Text style={styles.infoLabel}>Downloads</Text>
+                                <Text style={styles.infoValue}>1923</Text>
+                            </View>
+                            <View style={styles.infoDivider} />
+                            <View style={styles.infoItem}>
+                                <Text style={styles.infoLabel}>Updated</Text>
+                                <Text style={styles.infoValue}>3 days ago</Text>
+                            </View>
+                        </View>
 
                     </View>
 
@@ -162,7 +188,8 @@ const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'row',
         padding: 20,
-        alignItems: 'stretch', // This helps align children to full height
+        paddingBottom: 10,
+        alignItems: 'stretch',
     },
     contentContainer: {
         flex: 1,
@@ -219,11 +246,33 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 3,
         borderRadius: 6,
-        marginTop:5
+        marginTop: 5
     },
     editButtonText: {
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 10,
-    }
+    },
+    infoRow: {
+        flexDirection: 'row',
+        padding: 10,
+    },
+    infoItem: {
+        flex: 1,
+        alignItems: 'flex-start',
+        paddingLeft: 2
+    },
+    infoLabel: {
+        fontSize: 11,
+        color: Colors.gray,
+    },
+    infoValue: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'black',
+    },
+    infoDivider: {
+        width: 1,
+        backgroundColor: '#dddadaff',
+    },
 })
