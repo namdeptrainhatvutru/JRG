@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import * as Animatable from 'react-native-animatable'
 import Styles from '../common/Styles';
 import Colors from '../constants/Colors';
-import MyHeader from '../components/MyHeader';
+import MyHeader from '../Section/MyHeader';
 import Animated, { FadeIn, useAnimatedRef } from 'react-native-reanimated';
 
 export default function ColorScreen({ route, navigation }) {

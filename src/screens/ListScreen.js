@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Dimensions, FlatList, SafeAreaView, StyleSheet, Text, ToastAndroid, TouchableOpacity, View } from 'react-native'
 import Styles from '../common/Styles';
 import Colors from '../constants/Colors';
-import MyHeader from '../components/MyHeader';
+import MyHeader from '../Section/MyHeader';
 import { Button, List } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable'
 import Icon, { Icons } from '../components/Icons';

@@ -14,7 +14,7 @@ const loopImages = [
 ];
 const { width } = Dimensions.get('window');
 
-const MyBanner = () => {
+const MyBanner2 = () => {
     const scrollRef = useRef(null);
     const [index, setIndex] = useState(1);
 
@@ -82,14 +82,6 @@ const MyBanner = () => {
                     style={styles.arrowIcon}
                 />
             </TouchableOpacity>
-            <View style={{position: 'absolute', bottom: 10, left: 25,flexDirection:'row', alignItems:'center', padding:5, borderRadius:5}}>
-                <Image style={{width:40,height:40,borderRadius:5}} source={require('../assets/images/banner1.png')}/>
-                <Text style={{color:'#fff', fontWeight:'bold', fontSize:16,marginLeft:10}}>New Game</Text>
-                <TouchableOpacity style={{marginLeft: 150, backgroundColor:Colors.green,padding:8,borderRadius:8}}>
-                    <Text style={{color:'#fff', fontWeight:'bold'}}>Download</Text>
-                </TouchableOpacity>
-            </View>
-            {/* Dot indicator giống MyBanner2 */}
             <View style={styles.dotContainer}>
                 {bannerImages.map((_, i) => (
                     <View
@@ -105,7 +97,7 @@ const MyBanner = () => {
     )
 }
 
-export default MyBanner
+export default MyBanner2;
 
 const styles = StyleSheet.create({
     bannerContainer: {
@@ -115,34 +107,31 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     bannerScroll: {
-        marginTop: 5,
+    
     },
     banner: {
         width: width,
-        height: 200,
+        height: 80,
         resizeMode: 'cover',
     },
     arrowLeft: {
         position: 'absolute',
         left: 10,
-        top: 95,
-        zIndex: 2,
-        backgroundColor: '#ffffff88',
-        borderRadius: 20,
+        top: 30,
+        zIndex: 2,  
         padding: 6,
     },
     arrowRight: {
         position: 'absolute',
         right: 10,
-        top: 95,
+        top: 30,
         zIndex: 2,
-        backgroundColor: '#ffffff88',
-        borderRadius: 20,
         padding: 6,
     },
     arrowIcon: {
         width: 24,
         height: 24,
+        tintColor: '#ffffffff',
     },
     dotContainer: {
         position: 'absolute',

@@ -2,19 +2,35 @@ import { Dimensions, Image, ScrollView, StyleSheet, Text, View, TouchableOpacity
 import React, { useEffect, useRef, useState } from 'react'
 import Colors from '../constants/Colors';
 
-const bannerImages = [
-    require('../assets/images/banner1.png'),
-    require('../assets/images/banner2.png'),
-    require('../assets/images/banner1.png'),
+const bannerData = [
+    {
+        banner: require('../assets/images/banner1.png'),
+        thumb: require('../assets/images/banner1.png'),
+        name: 'New Game 1',
+        downloadLink: 'https://example.com/1'
+    },
+    {
+        banner: require('../assets/images/banner2.png'),
+        thumb: require('../assets/images/banner2.png'),
+        name: 'New Game 2',
+        downloadLink: 'https://example.com/2'
+    },
+    {
+        banner: require('../assets/images/banner1.png'),
+        thumb: require('../assets/images/banner1.png'),
+        name: 'New Game 3',
+        downloadLink: 'https://example.com/3'
+    },
 ];
+
 const loopImages = [
-    bannerImages[bannerImages.length - 1],
-    ...bannerImages,
-    bannerImages[0],
+    bannerData[bannerData.length - 1].banner,
+    ...bannerData.map(b => b.banner),
+    bannerData[0].banner,
 ];
 const { width } = Dimensions.get('window');
 
-const MyBanner2 = () => {
+const MyBanner = () => {
     const scrollRef = useRef(null);
     const [index, setIndex] = useState(1);
 
@@ -55,6 +71,9 @@ const MyBanner2 = () => {
         setIndex(nextIndex);
     };
 
+    // Sửa lại index để lấy đúng dữ liệu
+    const currentData = bannerData[(index - 1 + bannerData.length) % bannerData.length];
+
     return (
         <View style={styles.bannerContainer}>
             <TouchableOpacity style={styles.arrowLeft} onPress={() => handleArrow('left')}>
@@ -82,8 +101,18 @@ const MyBanner2 = () => {
                     style={styles.arrowIcon}
                 />
             </TouchableOpacity>
+            <View style={{position: 'absolute', bottom: 10, left: 25, right: 25, flexDirection:'row', alignItems:'center', padding:5, borderRadius:5, justifyContent:'space-between'}}>
+                <View style={{flexDirection:'row', alignItems:'center', flex: 1}}>
+                    <Image style={{width:30,height:30,borderRadius:5}} source={currentData.thumb}/>
+                    <Text style={{color:'#fff', fontWeight:'bold', fontSize:13,marginLeft:10}}>{currentData.name}</Text>
+                </View>
+                <TouchableOpacity style={{backgroundColor:Colors.green,paddingHorizontal:10,borderRadius:5,paddingVertical:5}}>
+                    <Text style={{color:'#fff', fontWeight:'bold',fontSize:9}}>Download</Text>
+                </TouchableOpacity>
+            </View>
+
             <View style={styles.dotContainer}>
-                {bannerImages.map((_, i) => (
+                {bannerData.map((_, i) => (
                     <View
                         key={i}
                         style={[
@@ -97,7 +126,7 @@ const MyBanner2 = () => {
     )
 }
 
-export default MyBanner2;
+export default MyBanner
 
 const styles = StyleSheet.create({
     bannerContainer: {
@@ -107,30 +136,31 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     bannerScroll: {
-    
+        marginTop: 5,
     },
     banner: {
         width: width,
-        height: 80,
+        height: 180,
         resizeMode: 'cover',
     },
     arrowLeft: {
         position: 'absolute',
         left: 10,
-        top: 30,
-        zIndex: 2,  
+        top: 90,
+        zIndex: 2,
         padding: 6,
     },
     arrowRight: {
         position: 'absolute',
         right: 10,
-        top: 30,
+        top: 90,
         zIndex: 2,
         padding: 6,
     },
     arrowIcon: {
         width: 24,
         height: 24,
+        tintColor: '#ffffffff',
     },
     dotContainer: {
         position: 'absolute',
@@ -143,8 +173,8 @@ const styles = StyleSheet.create({
         zIndex: 1,
     },
     dot: {
-        width: 8,
-        height: 8,
+        width: 5,
+        height: 5,
         borderRadius: 4,
         backgroundColor: '#ffffffff',
         marginHorizontal: 4,

@@ -1,10 +1,10 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Icon } from 'react-native-paper'
-import MyHeader from '../components/MyHeader'
-import ADS from '../components/ADS'
-import HotApp from '../components/HotApp'
-import AllApp from '../components/AllApp'
+import MyHeader from '../Section/MyHeader'
+import ADS from '../Section/ADS'
+import HotApp from '../Section/HotApp'
+import AllApp from '../Section/AllApp'
 const App = () => {
     return (
         <View style={styles.container}>
@@ -26,9 +26,9 @@ const App = () => {
             >
                 <ADS />
                 <View style={{ marginTop: 20 }} />
-                <HotApp name="Game" />
+                <HotApp name="Game" count={10} />
                 <View style={{ marginTop: -15, marginBottom: 20 }}><ADS /></View>
-                <HotApp name="Apps Premium" />
+                <HotApp name="Apps Premium" count={10} />
                 <AllApp />
             </ScrollView>
         </View>

@@ -5,6 +5,7 @@ import AnimTab2 from './bottomTab/AnimTab2';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Detail from './components/Detail';
+import Category from './components/Category';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,13 @@ const App = () => {
         <Stack.Screen 
           name="Detail" 
           component={Detail}
+          options={{ 
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen 
+          name="Category" 
+          component={Category}
           options={{ 
             headerShown: false,
           }}

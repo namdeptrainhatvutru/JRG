@@ -12,11 +12,11 @@ import Cart from '../screens/Cart';
 import App from '../screens/App';
 
 const TabArr = [
-  { route: 'Home', label: 'Home', type: Icons.Feather, icon: 'grid', component: App },
-  { route: 'Search', label: 'Search', type: Icons.Feather, icon: 'camera', component: ColorScreen },
-  { route: 'Add', label: 'Add', type: Icons.Feather, icon: 'home', component: Home },
-  { route: 'Like', label: 'Like', type: Icons.Feather, icon: 'shopping-cart', component: Cart },
-  { route: 'Account', label: 'Account', type: Icons.FontAwesome, icon: 'gear', component: Setting },
+  { route: 'Home', label: '', type: Icons.Feather, icon: 'grid', component: App },
+  { route: 'Search', label: '', type: Icons.Feather, icon: 'camera', component: ColorScreen },
+  { route: 'Add', label: '', type: Icons.Feather, icon: 'home', component: Home },
+  { route: 'Like', label: '', type: Icons.Feather, icon: 'shopping-cart', component: Cart },
+  { route: 'Account', label: '', type: Icons.FontAwesome, icon: 'gear', component: Setting },
 ];
 
 const Tab = createBottomTabNavigator();
@@ -57,7 +57,7 @@ const TabButton = (props) => {
       style={styles.container}>
       <Animatable.View
         ref={viewRef}
-        duration={1000}
+        duration={500}// tốc độ animation (ms)
         style={styles.container}>
         <View style={[styles.btn, { borderColor: focused ? Colors.white : Colors.green, backgroundColor: Colors.green }]}>
           <Animatable.View

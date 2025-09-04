@@ -7,7 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import MyHeader from '../components/MyHeader'
+import MyHeader from '../Section/MyHeader'
 import LinearGradient from 'react-native-linear-gradient'
 
 const SettingItem = ({ icon, title, IconComponent = Icon }) => {
@@ -194,7 +194,7 @@ const Setting = () => {
                     </View>
 
                     <View style={styles.designBy}>
-                        <Text style={styles.designText}>DESIGN BY @OTUNUY</Text>
+                        <Text style={styles.designText}>DESIGN BY @QTUNUY</Text>
                     </View>
 
                     {/* Empty space for bottom tab bar */}
@@ -344,7 +344,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FF3E96',
         paddingVertical: 8,
         paddingHorizontal: 20,
-        borderRadius: 20,
+        borderRadius: 10,
         marginTop: 10,
     },
     designText: {

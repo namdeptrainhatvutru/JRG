@@ -1,6 +1,6 @@
 import { FlatList, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import MyHeader from '../components/MyHeader'
+import MyHeader from '../Section/MyHeader'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Colors from '../constants/Colors'
 
@@ -23,7 +23,7 @@ const CartItem = ({ item }) => {
                 <Image source={item.logo} style={styles.logo}/>
                 <View style={styles.infoContainer}>
                     <Text style={styles.name}>{item.name}</Text>
-                    <Text style={styles.desc}>{item.desc}</Text>
+                    <Text numberOfLines={2} style={styles.desc}>{item.desc}</Text>
                     <Text style={styles.price}>{item.price} Coin</Text>
                 </View>
                 <Pressable style={styles.buyBtn}>
@@ -40,7 +40,7 @@ const CartItem = ({ item }) => {
 
 const Cart = () => {
     return (
-        <View>
+        <View style={{ flex: 1, backgroundColor: '#ffffffff' }}>
             <MyHeader
                 menu
                 onPressMenu={() => console.log('menu')}
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     fontSize: 12
   },
   desc:{
-    fontSize:8,
+    fontSize:7,
     color:'#666'
   },
   price:{

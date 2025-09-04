@@ -46,7 +46,7 @@ const AllApp = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>All Apps/Games</Text>
-        <Text style={styles.arrow}>{'>'}</Text>
+        <Image style={{width:20,height:20}} source={require('../assets/images/leftarrow.png')}/>
       </View>
 
       {data.map(item => (
