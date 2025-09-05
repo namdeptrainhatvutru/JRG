@@ -40,8 +40,8 @@ const Home = () => {
         <NewUpdate/>
         <ADS name="ADS"/>
         <View style={{ height: 5, backgroundColor: '#f2f2f2', marginHorizontal: -20,marginTop:10 }} />
-        <HotApp name='Hot Apps' count={10}/>
-        <HotApp name='Hot Games' count={10}/>
+        <HotApp name='Hot Apps' count={10} iconName="apps"/>
+        <HotApp name='Hot Games' count={10} iconName="gamepad" />
       </ScrollView>
  
     </View>

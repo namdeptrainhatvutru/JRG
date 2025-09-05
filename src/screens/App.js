@@ -26,9 +26,9 @@ const App = () => {
             >
                 <ADS />
                 <View style={{ marginTop: 20 }} />
-                <HotApp name="Game" count={10} />
+                <HotApp name="Games" iconName="gamepad" count={10} />
                 <View style={{ marginTop: -15, marginBottom: 20 }}><ADS /></View>
-                <HotApp name="Apps Premium" count={10} />
+                <HotApp name="Apps Premium" iconName="crown" count={10} />
                 <AllApp />
             </ScrollView>
         </View>

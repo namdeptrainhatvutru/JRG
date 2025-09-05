@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
 	title: {
 		color: '#fff',
 		fontWeight: 'bold',
-		fontSize: 9,
+		fontSize: 8,
 		marginBottom: 3,
 		marginLeft: 10,
 	},
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
 		marginBottom: 18,
 	},
 	item: {
-		width: 160,
+		
 		backgroundColor: 'transparent',
 		borderRadius: 12,
 		marginRight: 16,
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
 		borderRadius: 12,
 	},
 	info: {
-		width: 80,
+		width: 160,
 	},
 	name: {
 		color: '#fff',

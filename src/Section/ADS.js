@@ -59,6 +59,6 @@ const st = StyleSheet.create({
     fontWeight: 'bold',
   },
   download: {
-    marginLeft: 80, backgroundColor: '#18DA2C', padding: 5, borderRadius: 5
+    backgroundColor: '#18DA2C', padding: 5, borderRadius: 5
   }
 })

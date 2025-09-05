@@ -33,8 +33,8 @@ const Category = ({
     <ScrollView style={{marginTop:10,backgroundColor:'#fff'}} showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom:80}}>
         <ADS/>
         <View style={{height:10}}/>
-        <HotApp name="All games hack" iconName="keyboard"/>
-        <HotApp name="All games hack" count={10}/>
+        <HotApp name="All games hack" count={10} iconName="keyboard"/>
+        <HotApp name="All games hack" count={10} iconName="keyboard" />
     </ScrollView>
     </View>
   )

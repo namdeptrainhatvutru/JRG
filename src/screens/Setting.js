@@ -290,6 +290,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
         borderRadius: 10,
         padding: 15,
+        paddingVertical: 10,
         width: '48%',
         flexDirection: 'row',
         alignItems: 'center',

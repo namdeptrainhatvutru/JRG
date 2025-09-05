@@ -2,6 +2,7 @@ import { FlatList, Image, Pressable, StyleSheet, Text, View, Dimensions } from '
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Colors from '../constants/Colors';
 
 const { width } = Dimensions.get('window');
 const PADDING_HORIZONTAL = 20;
@@ -38,11 +39,15 @@ const HotApp = ({ name, count, iconName, iconColor = 'black' }) => {
             <Pressable onPress={() => nav.navigate('Detail')}>
                 <View style={[styles.itemContainer, { width: itemWidth }]}>
                     <Image style={[styles.image, { width: itemWidth, height: itemWidth }]} source={item.image} />
-                    <Text numberOfLines={1} style={{ fontWeight: 'bold', fontSize: 12, color: 'black', textAlign: 'center' }}>{item.name}</Text>
+                    <Text numberOfLines={1} style={{ fontWeight: 'bold', fontSize: 10, color: 'black' }}>{item.name}</Text>
                     <View style={styles.row}>
+                        <View style={{flexDirection:'row',alignItems:'center'}}>
                         <Image style={{ width: 8, height: 8 }} source={require('../assets/images/star-inline.png')} />
-                        <Text style={[styles.textItem, { color: '#d3bb04ff' }]}>{item.star}</Text>
-                        <Text style={[styles.textItem, { marginLeft: 15 }]}>{item.downloadCount}</Text>
+                        <Text style={[styles.textItem, { color: Colors.yellow }]}>{item.star}</Text>
+                        </View>
+                        <View>
+                        <Text style={[styles.textItem, {}]}>{item.downloadCount}</Text>
+                        </View>
                     </View>
                 </View>
             </Pressable>
@@ -101,9 +106,8 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         width: '100%',
-        paddingHorizontal: 5,
         marginTop: 2,
     },
     image: {
@@ -115,12 +119,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         backgroundColor: 'white',
         borderRadius: 10,
-        alignItems: 'center',
+        
         marginHorizontal: ITEM_MARGIN,
         padding: 5,
     },
     textItem: {
-        fontSize: 8,
+        fontSize: 7,
         color: 'gray'
     }
 })

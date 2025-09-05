@@ -6,7 +6,7 @@ import Colors from '../constants/Colors'
 
 const data = [
     {id:1,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'PUBG',desc:'Buy PUBBG with menu hack map',price:2000},
-    {id:2,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'PUBG',desc:'Buy PUBBG with menu hack map',price:2000},
+    {id:2,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'NET',desc:'Buy PUBBG with menu hack map PUBBG with menu hack ma',price:2000},
     {id:3,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'PUBG',desc:'Buy PUBBG with menu hack map',price:2000},
     {id:4,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'PUBG',desc:'Buy PUBBG with menu hack map',price:2000},
     {id:5,image:require('../assets/images/banner1.png'),logo:require('../assets/images/banner1.png'),name:'PUBG',desc:'Buy PUBBG with menu hack map',price:2000},
@@ -53,9 +53,15 @@ const Cart = () => {
                 bellBadge={1}
             />
             <ScrollView style={{backgroundColor:'#fff'}}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: 70, padding: 10, backgroundColor: '#fff', borderRadius: 10}}>
-                    <Icon name="cart" size={15} />
-                    <Text style={styles.market}>Market</Text>
+                <View style={{ flexDirection: 'row',  padding: 10, backgroundColor: '#fff', borderRadius: 10,alignItems:'center', justifyContent:'space-between' }}>
+                  <View style={{flexDirection:'row', alignItems:'center'}}>
+                  <Icon name="cart" size={15} />
+                   <Text style={styles.market}>Market</Text>
+                  </View>
+                  <View>
+                    <Image style={{width:16,height:16}} source={require('../assets/images/leftarrow.png')}/>
+                  </View>
+                    
                 </View>
                 <FlatList
                     style={{ margin: 2 }}
@@ -80,7 +86,6 @@ const styles = StyleSheet.create({
     margin: 5,
     backgroundColor: '#fff',
     borderRadius: 8,
-  
   },
   image:{
     height:100,
@@ -92,6 +97,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems:'center',
     padding: 5,
+    justifyContent: 'space-around',
+    height: 70,
   },
   logo:{
     height:30,
@@ -101,6 +108,7 @@ const styles = StyleSheet.create({
   infoContainer: {
     flex: 1,
     marginLeft: 8,
+    marginRight: 8,
   },
   name:{
     fontWeight:'bold',
@@ -108,7 +116,7 @@ const styles = StyleSheet.create({
     fontSize: 12
   },
   desc:{
-    fontSize:7,
+    fontSize:6,
     color:'#666'
   },
   price:{

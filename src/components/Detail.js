@@ -151,7 +151,7 @@ const Detail = () => {
               <View style={styles.contentContainer}>
                 <View style={{flexDirection: 'row'}}>
                   <Text
-                    style={{color: 'black', fontSize: 15, fontWeight: '900'}}>
+                    style={{color: 'black', fontSize: 10, fontWeight: '900'}}>
                     Facebook
                   </Text>
                   <View style={styles.tagLabel}>
@@ -190,7 +190,7 @@ const Detail = () => {
                     <Text
                       style={{
                         color: Colors.green,
-                        fontSize: 6,
+                        fontSize: 4,
                         backgroundColor: 'rgba(106, 242, 163, 0.5)',
                         padding: 5,
                         borderRadius: 5,
@@ -205,7 +205,7 @@ const Detail = () => {
                       style={{marginLeft: 5}}
                     />
                     <Text
-                      style={{color: Colors.gray, marginLeft: 2, fontSize: 6}}>
+                      style={{color: Colors.gray, marginLeft: 2, fontSize: 4}}>
                       Support android 5+
                     </Text>
                   </View>
@@ -218,7 +218,7 @@ const Detail = () => {
                     <Text
                       style={{
                         color: Colors.black,
-                        fontSize: 7,
+                        fontSize: 4,
                         backgroundColor: '#dddadaff',
                         padding: 3,
                         borderRadius: 2,
@@ -244,7 +244,7 @@ const Detail = () => {
                           style={{
                             color: Colors.gray,
                             marginLeft: 5,
-                            fontSize: 4,
+                            fontSize: 3,
                           }}>
                           Get it on
                         </Text>
@@ -252,14 +252,14 @@ const Detail = () => {
                           style={{
                             color: Colors.black,
                             marginLeft: 5,
-                            fontSize: 6,
+                            fontSize: 4,
                           }}>
                           Google Play
                         </Text>
                       </View>
                     </View>
                   </View>
-                  <Text style={{fontSize: 7}}>only Support device root</Text>
+                  <Text style={{fontSize: 4}}>only Support device root</Text>
                 </View>
               </View>
               <View style={styles.buttonContainer}>
@@ -316,38 +316,41 @@ const Detail = () => {
               </View>
             </View>
             <View style={{height: 1, backgroundColor: '#dddadaff'}} />
-            <View style={{flexDirection: 'row'}}>
-              <View style={styles.infomxh}>
-                <MaterialCommunityIcons name="facebook" size={13} />
+            <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',paddingVertical:4}}>
+              <View style={{flexDirection: 'row',paddingHorizontal:10,alignItems:'center'}}>
+                <View style={styles.infomxh}>
+                  <MaterialCommunityIcons name="facebook" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <FontAwesome5 name="discord" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <MaterialCommunityIcons name="instagram" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <FontAwesome5 name="twitter" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <FontAwesome5 name="tiktok" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <MaterialCommunityIcons name="facebook-messenger" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <MaterialCommunityIcons name="youtube" size={13} />
+                </View>
+                <View style={styles.infomxh}>
+                  <MaterialCommunityIcons name="twitch" size={13} />
+                </View>
+                <View
+                  style={[
+                    styles.infomxh,
+                    {marginLeft: 1, backgroundColor: '#dddadaff'},
+                  ]}>
+                  <Text style={{fontSize: 7}}>4.6k</Text>
+                </View>
               </View>
-              <View style={styles.infomxh}>
-                <FontAwesome5 name="discord" size={13} />
-              </View>
-              <View style={styles.infomxh}>
-                <MaterialCommunityIcons name="instagram" size={13} />
-              </View>
-              <View style={styles.infomxh}>
-                <FontAwesome5 name="twitter" size={10} />
-              </View>
-              <View style={styles.infomxh}>
-                <FontAwesome5 name="tiktok" size={13} />
-              </View>
-              <View style={styles.infomxh}>
-                <MaterialCommunityIcons name="facebook-messenger" size={13} />
-              </View>
-              <View style={styles.infomxh}>
-                <MaterialCommunityIcons name="youtube" size={13} />
-              </View>
-              <View style={styles.infomxh}>
-                <MaterialCommunityIcons name="twitch" size={13} />
-              </View>
-              <View
-                style={[
-                  styles.infomxh,
-                  {marginLeft: -2.5, backgroundColor: '#dddadaff', width: 35},
-                ]}>
-                <Text style={{fontSize: 10}}>4.6k</Text>
-              </View>
+              
               <View
                 style={{
                   justifyContent: 'center',
@@ -355,11 +358,9 @@ const Detail = () => {
                   borderWidth: 1,
                   borderColor: '#dddadaff',
                   borderRadius: 3,
-                  margin: 9,
                   padding: 2,
                   paddingHorizontal: 9,
-                  alignSelf: 'flex-end',
-                  marginLeft: 90,
+                  marginRight: 10,
                 }}>
                 <Text style={{fontSize: 9}}>+Follow</Text>
               </View>
@@ -499,7 +500,7 @@ const Detail = () => {
                   <Image
                     key={i}
                     source={img}
-                    style={{width: 200, height: 100, marginRight: 10}}
+                    style={{width: 250, height: 150, marginRight: 10}}
                   />
                 ))}
               </ScrollView>
@@ -612,7 +613,7 @@ const Detail = () => {
                     borderColor: '#dddadaff',
                     padding: 5,
                     borderTopWidth: 0,
-                    height: 100,
+                    height: 150,
                   }}
                   placeholder="What do you think?"
                 />
@@ -624,7 +625,11 @@ const Detail = () => {
                     padding: 5,
                     backgroundColor: '#F2F5FA',
                   }}>
-                  <Text>😄</Text>
+                  <FontAwesome5
+                    style={{marginLeft: 10}}
+                    name="smile-beam"
+                    size={20}
+                  />
                   <FontAwesome5
                     style={{marginLeft: 10}}
                     name="youtube"
@@ -814,8 +819,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    width: 65, // giảm từ 85
-    height: 65, // giảm từ 85
+    width: 85, // giảm từ 85
+    height: 85, // giảm từ 85
     borderRadius: 12, // giảm từ 15
   },
   topRightIcon: {
@@ -847,24 +852,22 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   tagLabel: {
-    marginLeft: 5, // giảm từ 8
-    height: 12, // giảm từ 15
+    marginLeft: 5, 
     borderWidth: 1,
-    borderColor: Colors.green,
-    paddingHorizontal: 3, // giảm từ 5
+    borderColor: Colors.green, 
     justifyContent: 'center',
+    marginTop: 3,
     alignItems: 'center',
-    marginTop: 3, // giảm từ 5
+    paddingHorizontal: 10,
+    paddingVertical: 1,
   },
   tagText: {
     color: Colors.green,
-    fontSize: 6, // giảm từ 8
-    textAlign: 'center',
-    textAlignVertical: 'center',
+    fontSize: 6, 
   },
   buttonContainer: {
     position: 'absolute',
-    top: 25,
+    top: 10,
     right: 20,
     width: '45%',
     alignItems: 'center',
@@ -872,7 +875,7 @@ const styles = StyleSheet.create({
   buttonRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 5,
+    marginTop: 25,
   },
   downloadButton: {
     backgroundColor: '#4CAF50',
@@ -882,7 +885,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     marginHorizontal: 5,
-    padding: 3,
+    padding: 3
   },
   downloadButtonText: {
     color: '#fff',
@@ -913,11 +916,11 @@ const styles = StyleSheet.create({
     paddingLeft: 3,
   },
   infoLabel: {
-    fontSize: 8,
+    fontSize: 5,
     color: Colors.gray,
   },
   infoValue: {
-    fontSize: 11,
+    fontSize: 8,
     fontWeight: 'bold',
     color: 'black',
   },
@@ -930,12 +933,9 @@ const styles = StyleSheet.create({
     borderColor: '#dddadaff',
     borderRadius: 3,
     padding: 2,
-    width: 20,
-    height: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 5,
-    marginRight: 2.5,
+    marginLeft: 5,
   },
   bannerContainer: {
     flexDirection: 'row',

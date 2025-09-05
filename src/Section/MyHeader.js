@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
   apkText: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 9,
   },
 })

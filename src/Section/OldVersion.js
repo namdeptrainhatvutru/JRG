@@ -62,14 +62,17 @@ const OldVersion = () => {
           />
             <View>
             <Text style={{fontWeight: 'bold', fontSize: 12, color: 'black'}}>{item.name} - {item.version}</Text>
-            <Text style={{fontSize:8,color:Colors.yellow,fontWeight:'bold'}}>⭐️{item.star}</Text>
+            <View style={{flexDirection:'row',alignItems:'center',marginTop:5}}>
+              <Image style={{width:10,height:10,tintColor:Colors.yellow,marginRight:2}} source={require('../assets/images/star-inline.png')}/>
+            <Text style={{fontSize:8,color:Colors.yellow,fontWeight:'bold'}}>{item.star}</Text>
+            </View>
             <View style={{flexDirection:'row',alignItems:'center'}}>
             <Text style={{fontSize: 5, color: Colors.green,marginRight:5,backgroundColor:'#B2F3D3',padding:3,borderRadius:3}}>{item.mb}</Text>
             <Text style={{fontSize: 5, color: Colors.green,marginRight:5,backgroundColor:'#B2F3D3',padding:3,borderRadius:3}}>{item.time}</Text>
             </View>
             </View>
             </View>
-            <TouchableOpacity style={{backgroundColor:Colors.green,padding:8,borderRadius:5,flexDirection:'row',paddingVertical:4}}>
+            <TouchableOpacity style={{backgroundColor:Colors.green,padding:8,borderRadius:5,flexDirection:'row',paddingVertical:4,alignItems:'center'}}>
                 <Image style={{width:15,height:15,tintColor:'white'}} source={require('../assets/images/download.png')}/>
                 <Text style={{color:'white',fontSize:10,fontWeight:'700',marginLeft:5}}>Download</Text>
             </TouchableOpacity>

@@ -117,14 +117,13 @@ const styles = StyleSheet.create({
     arrowLeft: {
         position: 'absolute',
         left: 10,
-        top: 30,
         zIndex: 2,  
         padding: 6,
     },
     arrowRight: {
         position: 'absolute',
         right: 10,
-        top: 30,
+   
         zIndex: 2,
         padding: 6,
     },
