@@ -88,9 +88,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   image:{
-    height:100,
+    height:120,
     width: '100%',
     borderRadius:8,
+    flex:1,
 
   },
   row: {
